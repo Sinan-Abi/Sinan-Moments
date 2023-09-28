@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+  <link rel="stylesheet" href="css.css">
+  <title>Welkom</title>
+</head>
+<style>
+  body,h1 {font-family: 'Audiowide', sans-serif}
+  body, html {height: 95%}
+  .bgimg {
+    background-image: url('/w3images/forestbridge.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+</style>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
+  <a href="./index.html">Welkom</a>
+  <a href="./momenten.html">Momenten</a>
+  <a href="./info.html">Info</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="toggleNav()">☰ Open Menu</button>  
+</div>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">Momenten</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">Open de menu met ESC <br>of door er op te klikken</p>
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    Gemaakt door Sinan Abi
+  </div>
+</div>
+
+<script>
+  document.onkeydown = function(e){
+      e = e || window.event;
+      var key = e.which || e.keyCode;
+      if(key === 27){
+          toggleNav();
+      }
+  }
+
+  function toggleNav() {
+      var sidebar = document.getElementById("mySidebar");
+      var main = document.getElementById("main");
+
+      if (sidebar.style.width === "250px") {
+          sidebar.style.width = "0";
+          main.style.marginLeft = "0";
+      } else {
+          sidebar.style.width = "250px";
+          main.style.marginLeft = "250px";
+      }
+  }
+</script>
+   
+</body>
+</html> 

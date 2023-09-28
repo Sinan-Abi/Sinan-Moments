@@ -1,0 +1,218 @@
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+  
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+  
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+.openbtn {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+  
+.openbtn:hover {
+    background-color: #7c7c7c;
+}
+  
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+#home_titel {
+    text-align: center;
+    background-color: #444;
+
+}
+
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+/* Momenten gedeelte */
+
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    padding: 20px;
+    font-family: 'Audiowide', sans-serif;
+}
+  
+/* Center website */
+.main {
+    max-width: 963px;
+    margin: auto;
+}
+  
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+  
+.row {
+    margin: 10px -16px;
+}
+  
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+  
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide all elements by default */
+}
+  
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Content */
+.content {
+    background-color: rgb(56, 56, 56);
+    padding: 10px;
+}
+  
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+  
+/* Style the buttons */
+.btn {
+    --c:  #229091; /* the color*/
+    
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .3em;
+    transition: background-size .4s, background-position 0s .4s;
+}
+
+.btn:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+}
+
+.btn.active {
+    box-shadow: 0 0 9e9q inset #0009; 
+    background-color: var(--c);
+    color: #fff;
+}
+
+.btn {
+    font-family: system-ui, sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: .1em .6em;
+    font-weight: bold;  
+    border: none;
+}
+
+.naam_clip_h {
+    font-family: 'Audiowide', sans-serif;
+    text-align: center;
+    background-color: rgb(147, 147, 147);
+    margin: auto;
+    padding: 10px;
+    border-radius: 80px;
+    width: 100%;
+}
+
+.naam_clip_p {
+    font-family: 'Audiowide', sans-serif;
+    text-align: center;
+    background-color: rgb(186, 83, 83);
+    margin: auto;
+    padding: 10px;
+    border-radius: 80px;
+    width: 40%;
+}
+
+.video_box {
+    border:5px solid rgb(150, 150, 150);
+    max-width: 100%; /* Ensure the video doesn't exceed the container width */
+    height: auto;
+}
+
+
+/* Background */
+
+html {
+	height: 100vh;
+	--sz: 10px; /*** size ***/
+	--c0: #000000;
+	--c1: #686868;
+  --c2: #3b3b3b;
+  --c3: #252525;
+  --ts: 50%/ calc(var(--sz) * 12.8) calc(var(--sz) * 22);
+  background:
+		/*bottom*/
+    conic-gradient(from 120deg at 50% 86.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
+    conic-gradient(from 120deg at 50% 86.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
+		/*bottom dark*/
+		conic-gradient(from 120deg at 50% 74%, var(--c0) 0 120deg, #fff0 0 360deg) var(--ts),
+		/*right*/
+		conic-gradient(from 60deg at 60% 50%, var(--c1) 0 60deg, var(--c2) 0 120deg, #fff0 0 360deg) var(--ts),
+		/*left*/
+		conic-gradient(from 180deg at 40% 50%, var(--c3) 0 60deg, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
+		/*top dark*/
+    conic-gradient(from 0deg at 90% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
+    conic-gradient(from -90deg at 10% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
+    conic-gradient(from 0deg at 90% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
+    conic-gradient(from -90deg at 10% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
+		/*top*/
+    conic-gradient(from -60deg at 50% 13.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
+    conic-gradient(from -60deg at 50% 13.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
+		conic-gradient(from -60deg at 50% 41%, var(--c2) 0 60deg, var(--c3) 0 120deg, #fff0 0 360deg) var(--ts),
+		var(--c0) ;
+
+}
